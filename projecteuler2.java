@@ -46,5 +46,6 @@ public class Solution {
             }
             System.out.println(evenSum);
         }
+        in.close();
     }
 }

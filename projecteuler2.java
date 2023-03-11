@@ -6,7 +6,7 @@ import java.util.regex.*;
 
 public class Solution {
   
-    public static long retunrFib(int n) { //Function to find the nth term of the Fibonacci Series
+    public static long retunrFib(int n) {         //Function to find the nth term of the Fibonacci Series
         if(n == 0) {
             return 0;
         }
@@ -26,7 +26,7 @@ public class Solution {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int t = in.nextInt();
-        if(t < 1 || t > 100000){ //Test case constraint
+        if(t < 1 || t > 100000){                  //Test case constraint
             System.exit(0);
         }
         
@@ -37,12 +37,12 @@ public class Solution {
                 System.exit(0);
             }
             
-            long third = 0;
-            long evenSum = 0;
+            long third = 0;                       //Holds every third term in the Fibonacci Series
+            long evenSum = 0;                     //Holds the sum of the even terms
             
-            for(int i = 3; third <= n; i += 3){ //Every 3rd term in the Fibonacci Series is an even number
+            for(int i = 3; third <= n; i += 3){   //Every 3rd term in the Fibonacci Series is an even number
                 evenSum += third;
-                third = returnFib(i); //Holds every third term in the Fibonacci Series
+                third = returnFib(i);
             }
             System.out.println(evenSum);
         }
